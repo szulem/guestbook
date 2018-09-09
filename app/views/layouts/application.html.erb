@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GuestBook</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div class="container">
+  		<div class="page-header">
+  			<% if flash[:notice] %>
+  				<div class="alert alert-success">
+  					<%= flash[:notice] %>
+  				</div>
+  			<% end %>
+
+  			<h1>Księga gości</h1>
+  		</div>
+  		<%= yield %>
+  	</div>
+  </body>
+</html>
