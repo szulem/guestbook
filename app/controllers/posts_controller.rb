@@ -10,8 +10,10 @@ class PostsController < ApplicationController
   def create
   	@post = Post.new(post_params)
   	if @post.save
-  		flash[:notice] = "Dziękujemy za dodanie wpisu!"
+  		flash[:success] = "Dziękujemy za dodanie wpisu!"
   		redirect_to posts_path
+  	else
+  		render 'new'
   	end
   end
 
