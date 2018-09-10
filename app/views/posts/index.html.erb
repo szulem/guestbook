@@ -1,11 +1,11 @@
 <p class="lead">
-	Welcome to our guestbook!
-	<%= link_to "Add new post!", new_post_path %>
+  Welcome to our guestbook!
+  <%= link_to "Add new post!", new_post_path %>
 </p>
 
 <% @posts.each do |post| %>
-	<blockquote>
-		<p><%= post.body %></p>
-		<footer><cite><%= post.author %></cite></footer>
-	</blockquote>
+  <blockquote>
+    <p><%= post.body %></p>
+    <footer><cite><%= post.author %></cite></footer>
+  </blockquote>
 <% end %>
